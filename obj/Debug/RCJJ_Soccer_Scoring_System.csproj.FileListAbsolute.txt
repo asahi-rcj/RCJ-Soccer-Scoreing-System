@@ -1,0 +1,8 @@
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\obj\Debug\RCJJ_Soccer_Scoring_System.csproj.AssemblyReference.cache
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\obj\Debug\RCJJ_Soccer_Scoring_System.csproj.SuggestedBindingRedirects.cache
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\obj\Debug\RCJJ_Soccer_Scoring_System.csproj.CoreCompileInputs.cache
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Build\RCJJ_Soccer_Scoring_System.exe.config
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Build\RCJJ_Soccer_Scoring_System.exe
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Build\RCJJ_Soccer_Scoring_System.pdb
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\obj\Debug\RCJJ_Soccer_Scoring_System.exe
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\obj\Debug\RCJJ_Soccer_Scoring_System.pdb

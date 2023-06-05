@@ -1,0 +1,16 @@
+﻿{
+  "gameTime": 300,
+  "original_OutTime": true,
+  "robot_OutTime": 30,
+  "team_Name": [
+    "Blend",
+    "Legend",
+    "All_outlook",
+    "Crescent(Re)"
+  ],
+  "game_Name": [
+    "第1試合",
+    "第2試合",
+    "第3試合"
+  ]
+}

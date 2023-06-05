@@ -1,0 +1,9 @@
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Debug\Amaoto.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Debug\Amaoto.pdb
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Debug\Amaoto.csprojAssemblyReference.cache
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Debug\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Debug\Amaoto.csproj.CopyComplete
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Debug\Amaoto.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Debug\Amaoto.pdb

@@ -1,0 +1,55 @@
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\bin\x64\Release\Amaoto.dll
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\bin\x64\Release\Amaoto.pdb
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\bin\x64\Release\Amaoto.xml
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\obj\x64\Release\Amaoto.csprojAssemblyReference.cache
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\obj\x64\Release\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\obj\x64\Release\Amaoto.csproj.CopyComplete
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\obj\x64\Release\Amaoto.dll
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\obj\x64\Release\Amaoto.pdb
+C:\Users\0ren5\source\repos\Windows Desktop 2020\Amaoto\bin\x64\Release\DxLibDotNet.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Release\Amaoto.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Release\Amaoto.pdb
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Release\Amaoto.xml
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Release\Amaoto.csprojAssemblyReference.cache
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Release\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Release\Amaoto.csproj.CopyComplete
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Release\Amaoto.dll
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\obj\x64\Release\Amaoto.pdb
+C:\Users\0ren5\source\repos\TJAPlayer\Amaoto\bin\x64\Release\DxLibDotNet.dll
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\bin\x64\Release\Amaoto.dll
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\bin\x64\Release\Amaoto.pdb
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\bin\x64\Release\Amaoto.xml
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\bin\x64\Release\DxLibDotNet.dll
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\obj\x64\Release\Amaoto.csprojAssemblyReference.cache
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\obj\x64\Release\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\obj\x64\Release\Amaoto.csproj.CopyComplete
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\obj\x64\Release\Amaoto.dll
+C:\Users\0ren5\Source\Repos\touhourenren\TJAPlayer-WithDX\Amaoto\obj\x64\Release\Amaoto.pdb
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\bin\x64\Release\Amaoto.dll
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\bin\x64\Release\Amaoto.pdb
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\bin\x64\Release\Amaoto.xml
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.csproj.AssemblyReference.cache
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.csproj.CopyComplete
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.dll
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.pdb
+C:\Users\a_sa_hi\source\repos\EPC_RhythmGame\Amaoto\bin\x64\Release\DxLibDotNet.dll
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\bin\x64\Release\Amaoto.dll
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\bin\x64\Release\Amaoto.pdb
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\bin\x64\Release\Amaoto.xml
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\bin\x64\Release\DxLibDotNet.dll
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.csproj.AssemblyReference.cache
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.csproj.CopyComplete
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.dll
+C:\Users\a_sa_hi\Source\Repos\asahi-rcj\M-EPC_RhythmGame\Amaoto\obj\x64\Release\Amaoto.pdb
