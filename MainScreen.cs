@@ -27,11 +27,19 @@ namespace RCJJ_Soccer_Scoring_System
 
         private Counter[] ctRoboOutCounter = new Counter[4];
 
+        private Counter ctTeamNameAnime;
+
+        //300, 180, 60, 10, 5, 4, 3, 2, 1
+        private int[] TimeOfPlayTimeNotification = new int[] { 300, 180, 60, 10, 5, 4, 3, 2, 1 };
+        private bool[] IsPlayedTimeNotification;
+        private bool IsPlayedGameEnd;
+        private bool[] IsPlayedTimeOut = new bool[4];
+
         private bool IsSettingMode = false;
 
         public void Enable()
         {
-            ctGameTimer = new Counter(0, Program.config.GameTime, 1000000, true);
+            ctGameTimer = new Counter(0, Program.config.GameTime, 1000000, false);
 
             for(int i = 0; i < 4; i++)
             {
@@ -44,6 +52,8 @@ namespace RCJJ_Soccer_Scoring_System
                     ctRoboOutCounter[i] = new Counter(0, Program.config.GameTime / 10, 1000000, false);
                 }
             }
+
+            IsPlayedTimeNotification = new bool[TimeOfPlayTimeNotification.Length];
         }
 
         public void Draw()
@@ -84,7 +94,7 @@ namespace RCJJ_Soccer_Scoring_System
 
             DrawBox(963, 57, 1341, 213, GetColor(0, 0, 0), TRUE);
 
-            DrawStringToHandle(1015, 95, dt.ToString("hh:mm:ss"), GetColor(255, 255, 0), System_Font);
+            DrawStringToHandle(1015, 95, dt.ToString("HH:mm:ss"), GetColor(255, 255, 0), System_Font);
 
             #endregion
 
@@ -94,9 +104,10 @@ namespace RCJJ_Soccer_Scoring_System
 
             {
                 int team_type = IsFirstHalf == true ? 0 : 1;
-
-                int width = GetDrawStringWidthToHandle(Program.config.Team_Name[TeamNameIndex[team_type]], (int)strlenDx(Program.config.Team_Name[TeamNameIndex[team_type]]), System_Font3);
-                DrawStringToHandle(667 / 2 - width / 2, 257, Program.config.Team_Name[TeamNameIndex[team_type]], GetColor(255, 255, 255), System_Font3);
+                
+                string text = Program.config.Team_Name[this.TeamNameIndex[team_type]];
+                int width = GetDrawStringWidthToHandle(text, (int)strlenDx(text), System_Font3);
+                DrawStringToHandle(667 / 2 - width / 2, 257, text, GetColor(255, 255, 255), System_Font3);
 
                 if (Program.Mouse.IsExistInArea(new Point(3, 220), new Point(670, 375)) && !IsSettingMode)
                 {
@@ -118,8 +129,10 @@ namespace RCJJ_Soccer_Scoring_System
             {
                 int team_type = IsFirstHalf == true ? 1 : 0;
 
-                int width = GetDrawStringWidthToHandle(Program.config.Team_Name[TeamNameIndex[team_type]], (int)strlenDx(Program.config.Team_Name[TeamNameIndex[team_type]]), System_Font3);
-                DrawStringToHandle(676 + 667 / 2 - width / 2, 257, Program.config.Team_Name[TeamNameIndex[team_type]], GetColor(0, 0, 0), System_Font3);
+                string text = Program.config.Team_Name[this.TeamNameIndex[team_type]];
+
+                int width = GetDrawStringWidthToHandle(text, (int)strlenDx(text), System_Font3);
+                DrawStringToHandle(676 + 667 / 2 - width / 2, 257, text, GetColor(0, 0, 0), System_Font3);
 
                 if (Program.Mouse.IsExistInArea(new Point(676, 220), new Point(1342, 375)) && !IsSettingMode)
                 {
@@ -211,8 +224,9 @@ namespace RCJJ_Soccer_Scoring_System
             DrawBox(484, 543, 861, 807, GetColor(0, 0, 0), TRUE);
 
             {
-                int Minutes = (Program.config.GameTime - this.ctGameTimer.Value) / 60;
-                int Second = (Program.config.GameTime - this.ctGameTimer.Value) % 60;
+                int value = Program.config.GameTime - this.ctGameTimer.Value;
+                int Minutes = (value) / 60;
+                int Second = (value) % 60;
 
                 string strM = Minutes < 10 ? "0" + Minutes.ToString() : Minutes.ToString();
                 string strS = Second < 10 ? "0" + Second.ToString() : Second.ToString();
@@ -220,7 +234,14 @@ namespace RCJJ_Soccer_Scoring_System
                 string text = strM + ":" + strS;
                 int width = GetDrawStringWidthToHandle(text, (int)strlenDx(text), System_Font6);
 
-                DrawStringToHandle(484 + 190 - width / 2, 605, text, GetColor(255, 255, 0), System_Font6);
+                if(value <= 10)
+                {
+                    DrawStringToHandle(484 + 190 - width / 2, 605, text, GetColor(255, 0, 0), System_Font6);
+                }
+                else
+                {
+                    DrawStringToHandle(484 + 190 - width / 2, 605, text, GetColor(255, 255, 0), System_Font6);
+                }
 
                 if (Program.Mouse.IsExistInArea(new Point(484, 543), new Point(861, 807)) && !IsSettingMode)
                 {
@@ -290,6 +311,7 @@ namespace RCJJ_Soccer_Scoring_System
                         if (Program.Mouse.IsPushedButton(MouseButton.Left))
                         {
                             this.ctGameTimer.Value = this.ctGameTimer.Begin;
+                            ResetPlayOfSoundFlag();
                         }
                     }
                 }
@@ -333,6 +355,8 @@ namespace RCJJ_Soccer_Scoring_System
                                 this.ctRoboOutCounter[i].Stop();
                                 this.ctRoboOutCounter[i].Value = 0;
                             }
+
+                            ResetPlayOfSoundFlag();
                         }
                     }
                 }
@@ -462,6 +486,7 @@ namespace RCJJ_Soccer_Scoring_System
                         {
                             this.ctRoboOutCounter[i].Stop();
                             this.ctRoboOutCounter[i].Value = 0;
+                            this.IsPlayedTimeOut[i] = false;
                         }
                     }
                 }
@@ -474,13 +499,25 @@ namespace RCJJ_Soccer_Scoring_System
 
                 int width = GetDrawStringWidthToHandle(text, (int)strlenDx(text), System_Font8);
 
-                DrawStringToHandle(1636 + 282 / 2 - width / 2, 86 + i * 216, text, GetColor(255, 255, 255), System_Font8);
-
                 DrawStringToHandle(1502, 86 + i * 216, (i + 1).ToString(), GetColor(255, 255, 255), System_Font8);
 
                 if (this.ctRoboOutCounter[i].State == TimerState.Stopped)
                 {
-                    DrawBoxO(1635, 57 + i * 216, 1919, 213 + i * 216, GetColor(0, 0, 0), TRUE, 128);
+                    if(value == 0)
+                    {
+                        DrawBox(1635, 57 + i * 216, 1919, 213 + i * 216, GetColor(255, 50, 100), TRUE);
+                        DrawStringToHandle(1636 + 282 / 2 - width / 2, 86 + i * 216, text, GetColor(255, 255, 255), System_Font8);
+
+                    }
+                    else
+                    {
+                        DrawStringToHandle(1636 + 282 / 2 - width / 2, 86 + i * 216, text, GetColor(255, 255, 255), System_Font8);
+                        DrawBoxO(1635, 57 + i * 216, 1919, 213 + i * 216, GetColor(0, 0, 0), TRUE, 128);
+                    }
+                }
+                else
+                {
+                    DrawStringToHandle(1636 + 282 / 2 - width / 2, 86 + i * 216, text, GetColor(255, 255, 255), System_Font8);
                 }
 
                 if (Program.Mouse.IsExistInArea(new Point(1438, 52 + i * 216), new Point(1919, 218 + i * 216)) && !IsSettingMode)
@@ -491,12 +528,23 @@ namespace RCJJ_Soccer_Scoring_System
                     {
                         if (this.ctRoboOutCounter[i].State == TimerState.Stopped)
                         {
-                            this.ctRoboOutCounter[i].Start();
+                            if(value == 0)
+                            {
+                                this.ctRoboOutCounter[i].Stop();
+                                this.ctRoboOutCounter[i].Value = 0;
+                                this.IsPlayedTimeOut[i] = false;
+                            }
+                            else
+                            {
+                                this.ctRoboOutCounter[i].Start();
+                                this.IsPlayedTimeOut[i] = false;
+                            }
                         }
                         else
                         {
                             this.ctRoboOutCounter[i].Stop();
                             this.ctRoboOutCounter[i].Value = 0;
+                            this.IsPlayedTimeOut[i] = false;
                         }
                     }
                 }
@@ -543,6 +591,47 @@ namespace RCJJ_Soccer_Scoring_System
             ctRoboOutCounter[3].Tick();
 
             dt = DateTime.Now;
+
+            for(int i = 0; i < TimeOfPlayTimeNotification.Length; i++)
+            {
+                if(this.ctGameTimer.Value == TimeOfPlayTimeNotification[i] && this.ctGameTimer.End != TimeOfPlayTimeNotification[i] && !this.IsPlayedTimeNotification[i])
+                {
+                    Program.rl.Time_Notification.Play();
+                    this.IsPlayedTimeNotification[i] = true;
+                }
+            }
+
+            if (this.ctGameTimer.Value == this.ctGameTimer.End && !this.IsPlayedGameEnd)
+            {
+                Program.rl.Game_End.Play();
+                this.IsPlayedGameEnd = true;
+                this.IsGameStarting = false;
+            }
+
+            for(int i = 0; i < 4; i++)
+            {
+                if (this.ctRoboOutCounter[i].Value == this.ctRoboOutCounter[i].End && !this.IsPlayedTimeOut[i])
+                {
+                    Program.rl.Time_Out.Play();
+                    this.IsPlayedTimeOut[i] = true;
+                }
+            }
+        }
+
+        private void ResetPlayOfSoundFlag()
+        {
+            for (int i = 0; i < TimeOfPlayTimeNotification.Length; i++)
+            {
+                this.IsPlayedTimeNotification[i] = false;
+
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                this.IsPlayedTimeOut[i] = false;
+            }
+            this.IsPlayedGameEnd = false;
+
+            Program.rl.Game_End.Stop();
         }
 
         private void DrawBoxO(int x1, int y1, int x2, int y2, uint color, int fillflag, int opacity)

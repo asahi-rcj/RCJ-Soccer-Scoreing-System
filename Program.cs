@@ -31,7 +31,6 @@ namespace RCJ_Soccer_Scoring_System
             SetOutApplicationLogValidFlag(FALSE);
             SetUseTransColor(FALSE);
             if (DxLib_Init() == -1) return;
-            SetDrawScreen(DX_SCREEN_BACK);
             SetMouseDispFlag(TRUE);
 
             #endregion
@@ -50,6 +49,13 @@ namespace RCJ_Soccer_Scoring_System
             ms = new MainScreen();
 
             ms.Enable();
+
+            CreateMaskScreen();
+            SetMaskScreenGraph(MaskScreenHandle);
+                
+            MaskScreenHandle = MakeScreen(1920, 1080, TRUE);
+
+            SetDrawScreen(DX_SCREEN_BACK);
 
             while (ProcessMessage() == 0)
             {
@@ -77,11 +83,22 @@ namespace RCJ_Soccer_Scoring_System
                     }
                 }
 
+                if (Input.IsPushedKey(KEY_INPUT_F12))
+                {
+                    DateTime dt = DateTime.Now;
+                    SaveDrawScreenToPNG(0, 0, 1920, 1080, "ScreenShot\\" + dt.ToString("yyyyMMddHHmmss") + ".png");
+                }
+
+
                 ScreenFlip();
             }
+
+            DxLib_End();
         }
 
         public static bool IsWindowMode = true;
+
+        public static int MaskScreenHandle;
 
         public static MainScreen ms;
         public static Config.GameConfig config;

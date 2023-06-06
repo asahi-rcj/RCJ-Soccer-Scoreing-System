@@ -78,3 +78,13 @@ C:\Users\0ren5\source\repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Amaoto\obj\Deb
 C:\Users\0ren5\source\repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.csproj.CopyComplete
 C:\Users\0ren5\source\repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.dll
 C:\Users\0ren5\source\repos\asahi-rcj\RCJJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.pdb
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\bin\Debug\Amaoto.dll
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\bin\Debug\Amaoto.pdb
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\bin\Debug\DxLibDotNet.dll
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\bin\Debug\Newtonsoft.Json.dll
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\bin\Debug\Newtonsoft.Json.xml
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.csproj.AssemblyReference.cache
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.csproj.CoreCompileInputs.cache
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.csproj.CopyComplete
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.dll
+C:\Users\0ren5\Source\Repos\asahi-rcj\RCJ-Soccer-Scoreing-System\Amaoto\obj\Debug\Amaoto.pdb
