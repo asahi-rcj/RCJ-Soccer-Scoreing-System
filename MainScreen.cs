@@ -22,15 +22,17 @@ namespace RCJJ_Soccer_Scoring_System
         private int[] TeamPoint = new int[] { 0, 0 };
         private int[] TeamNameIndex = new int[] { 0, 0 };
 
+        private Counter[] ctTeamNameScroll = new Counter[2];
+
         private Counter ctGameTimer;
         private DateTime dt;
 
         private Counter[] ctRoboOutCounter = new Counter[4];
 
-        private Counter ctTeamNameAnime;
+        private Counter ctHalfTimer;
 
         //300, 180, 60, 10, 5, 4, 3, 2, 1
-        private int[] TimeOfPlayTimeNotification = new int[] { 300, 180, 60, 10, 5, 4, 3, 2, 1 };
+        private int[] TimeOfPlayTimeNotification = new int[] { 300, 180, 60, 30, 10, 5, 4, 3, 2, 1 };
         private bool[] IsPlayedTimeNotification;
         private bool IsPlayedGameEnd;
         private bool[] IsPlayedTimeOut = new bool[4];
@@ -53,7 +55,17 @@ namespace RCJJ_Soccer_Scoring_System
                 }
             }
 
+            string team_name_blue = Program.config.Team_Name[this.TeamNameIndex[0]];
+            string team_name_yellow = Program.config.Team_Name[this.TeamNameIndex[0]];
+
+            ctTeamNameScroll[0] = new Counter(0, (int)GetDrawStringWidthToHandle(team_name_blue, (int)strlenDx(team_name_blue), System_Font3) + 150, 10000, true);
+            ctTeamNameScroll[1] = new Counter(0, (int)GetDrawStringWidthToHandle(team_name_blue, (int)strlenDx(team_name_blue), System_Font3) + 150, 10000, true);
+            ctTeamNameScroll[0].Start();
+            ctTeamNameScroll[1].Start();
+
             IsPlayedTimeNotification = new bool[TimeOfPlayTimeNotification.Length];
+
+            ctHalfTimer = new Counter(0, Program.config.HalfTime, 1000000, false);
         }
 
         public void Draw()
@@ -104,10 +116,27 @@ namespace RCJJ_Soccer_Scoring_System
 
             {
                 int team_type = IsFirstHalf == true ? 0 : 1;
-                
+
                 string text = Program.config.Team_Name[this.TeamNameIndex[team_type]];
                 int width = GetDrawStringWidthToHandle(text, (int)strlenDx(text), System_Font3);
-                DrawStringToHandle(667 / 2 - width / 2, 257, text, GetColor(255, 255, 255), System_Font3);
+
+                SetDrawScreen(Program.MaskScreenHandle);
+
+                ClearDrawScreen();
+
+                DrawBox(3, 220, 670, 375, GetColor(0, 0, 0), TRUE);
+
+
+                SetDrawScreen(DX_SCREEN_BACK);
+
+                SetUseMaskScreenFlag(TRUE);
+
+                for (int i = 0; i < ((670 - 3) / (width + 150)) + 2; i++)
+                {
+                    DrawStringToHandle(23 - ctTeamNameScroll[0].Value + i * (width + 150), 220 + (375 - 220) / 2 - 65 / 2, text, GetColor(255, 255, 255), System_Font3);
+                }
+
+                SetUseMaskScreenFlag(FALSE);
 
                 if (Program.Mouse.IsExistInArea(new Point(3, 220), new Point(670, 375)) && !IsSettingMode)
                 {
@@ -116,6 +145,11 @@ namespace RCJJ_Soccer_Scoring_System
                     if (Program.Mouse.IsPushedButton(MouseButton.Left))
                     {
                         this.TeamNameIndex[team_type] = (this.TeamNameIndex[team_type] + 1) % Program.config.Team_Name.Length;
+
+                        string next_text = Program.config.Team_Name[this.TeamNameIndex[team_type]];
+                        int next_width = GetDrawStringWidthToHandle(next_text, (int)strlenDx(next_text), System_Font3);
+                        ctTeamNameScroll[0] = new Counter(0, next_width + 150, 10000, true);
+                        ctTeamNameScroll[0].Start();
                     }
                 }
             }
@@ -132,7 +166,25 @@ namespace RCJJ_Soccer_Scoring_System
                 string text = Program.config.Team_Name[this.TeamNameIndex[team_type]];
 
                 int width = GetDrawStringWidthToHandle(text, (int)strlenDx(text), System_Font3);
-                DrawStringToHandle(676 + 667 / 2 - width / 2, 257, text, GetColor(0, 0, 0), System_Font3);
+
+
+                SetDrawScreen(Program.MaskScreenHandle);
+
+                ClearDrawScreen();
+
+                DrawBox(676, 220, 1342, 375, GetColor(0, 0, 0), TRUE);
+
+
+                SetDrawScreen(DX_SCREEN_BACK);
+
+                SetUseMaskScreenFlag(TRUE);
+
+                for (int i = 0; i < ((1342 - 676) / (width + 150)) + 2; i++)
+                {
+                    DrawStringToHandle(696 - ctTeamNameScroll[1].Value + i * (width + 150), 220 + (375 - 220) / 2 - 65 / 2, text, GetColor(0, 0, 0), System_Font3);
+                }
+
+                SetUseMaskScreenFlag(FALSE);
 
                 if (Program.Mouse.IsExistInArea(new Point(676, 220), new Point(1342, 375)) && !IsSettingMode)
                 {
@@ -141,6 +193,10 @@ namespace RCJJ_Soccer_Scoring_System
                     if (Program.Mouse.IsPushedButton(MouseButton.Left))
                     {
                         this.TeamNameIndex[team_type] = (this.TeamNameIndex[team_type] + 1) % Program.config.Team_Name.Length;
+                        string next_text = Program.config.Team_Name[this.TeamNameIndex[team_type]];
+                        int next_width = GetDrawStringWidthToHandle(next_text, (int)strlenDx(next_text), System_Font3);
+                        ctTeamNameScroll[1] = new Counter(0, next_width + 150, 10000, true);
+                        ctTeamNameScroll[1].Start();
                     }
                 }
             }
@@ -558,7 +614,89 @@ namespace RCJJ_Soccer_Scoring_System
 
                 DrawBoxO(0, 0, 1920, 1080, GetColor(0, 0, 0), TRUE, 192);
 
-                DrawBox(1920 - 550, 0, 1920, 1080, GetColor(255, 255, 255), TRUE);
+                DrawBoxO(1920 - 550, 0, 1920, 1080, GetColor(255, 255, 255), TRUE, 230);
+
+
+                #region [ Timer ShowBox ]
+
+                int tim_position_x = 1400;
+                int tim_position_y = 150;
+
+                int tim_size_width = 500;
+                int tim_size_height = 200;
+
+                DrawRoundRect(tim_position_x, tim_position_y, tim_position_x + tim_size_width, tim_position_y + tim_size_height, 10, 10, GetColor(0, 0, 0), FALSE);
+
+                int tim_value = ctHalfTimer.End - ctHalfTimer.Value;
+                string tim_upper = tim_value / 60 >= 10 ? (tim_value / 60).ToString() : "0" + (tim_value / 60).ToString();
+                string tim_lower = tim_value % 60 < 10 ? "0" + (tim_value % 60).ToString() : (tim_value % 60).ToString();
+
+                DrawStringToHandle(tim_position_x + 118, tim_position_y + 36, tim_upper + ":" + tim_lower, GetColor(0, 0, 0), System_Font2);
+
+                #endregion
+
+                #region [ Start Button ]
+
+                int st_position_x = 1500;
+                int st_position_y = 500;
+
+                int st_bt_size_width = 300;
+                int st_bt_size_height = 100;
+
+                DrawRoundRect(st_position_x, st_position_y, st_position_x + st_bt_size_width, st_position_y + st_bt_size_height, 10, 10, GetColor(0, 0, 0), FALSE);
+
+                if (ctHalfTimer.State == TimerState.Stopped)
+                {
+                    DrawStringToHandle(st_position_x + 76, st_position_y + 15, "Start", GetColor(0, 0, 0), System_Font5);
+                }
+                else
+                {
+                    DrawStringToHandle(st_position_x + 82, st_position_y + 15, "Stop", GetColor(0, 0, 0), System_Font5);
+                }
+
+                if (Program.Mouse.IsExistInArea(new Point(st_position_x, st_position_y), new Point(st_position_x + st_bt_size_width, st_position_y + st_bt_size_height)) && IsSettingMode)
+                {
+                    DrawRoundRectO(st_position_x, st_position_y, st_position_x + st_bt_size_width, st_position_y + st_bt_size_height, 10, 10, GetColor(0, 0, 0), TRUE, 128);
+
+                    if (Program.Mouse.IsPushedButton(MouseButton.Left))
+                    {
+                        if (ctHalfTimer.State == TimerState.Stopped)
+                        {
+                            ctHalfTimer.Start();
+                        }
+                        else
+                        {
+                            ctHalfTimer.Stop();
+                        }
+                    }
+                }
+
+                #endregion
+
+                #region [ Start Button ]
+
+                int res_position_x = 1500;
+                int res_position_y = 650;
+
+                int res_bt_size_width = 300;
+                int res_bt_size_height = 100;
+
+                DrawRoundRect(res_position_x, res_position_y, res_position_x + res_bt_size_width, res_position_y + res_bt_size_height, 10, 10, GetColor(0, 0, 0), FALSE);
+
+                DrawStringToHandle(res_position_x + 68, res_position_y + 15, "Reset", GetColor(0, 0, 0), System_Font5);
+
+                if (Program.Mouse.IsExistInArea(new Point(res_position_x, res_position_y), new Point(res_position_x + res_bt_size_width, res_position_y + res_bt_size_height)) && IsSettingMode)
+                {
+                    DrawRoundRectO(res_position_x, res_position_y, res_position_x + res_bt_size_width, res_position_y + res_bt_size_height, 10, 10, GetColor(0, 0, 0), TRUE, 128);
+
+                    if (Program.Mouse.IsPushedButton(MouseButton.Left))
+                    {
+                        ctHalfTimer.Reset();
+                        ctHalfTimer.Stop();
+                    }
+                }
+
+                #endregion 
 
                 #region [ Close Button ]
 
@@ -590,11 +728,16 @@ namespace RCJJ_Soccer_Scoring_System
             ctRoboOutCounter[2].Tick();
             ctRoboOutCounter[3].Tick();
 
+            ctTeamNameScroll[0].Tick();
+            ctTeamNameScroll[1].Tick();
+
+            ctHalfTimer.Tick();
+
             dt = DateTime.Now;
 
             for(int i = 0; i < TimeOfPlayTimeNotification.Length; i++)
             {
-                if(this.ctGameTimer.Value == TimeOfPlayTimeNotification[i] && this.ctGameTimer.End != TimeOfPlayTimeNotification[i] && !this.IsPlayedTimeNotification[i])
+                if((this.ctGameTimer.End - this.ctGameTimer.Value) == TimeOfPlayTimeNotification[i] && this.ctGameTimer.End != TimeOfPlayTimeNotification[i] && !this.IsPlayedTimeNotification[i])
                 {
                     Program.rl.Time_Notification.Play();
                     this.IsPlayedTimeNotification[i] = true;
@@ -650,7 +793,7 @@ namespace RCJJ_Soccer_Scoring_System
 
         private int System_Font = CreateFontToHandle("MS UI Gothic", 80, 5, DX_FONTTYPE_ANTIALIASING_16X16);
         private int System_Font2 = CreateFontToHandle("MS UI Gothic", 120, 5, DX_FONTTYPE_ANTIALIASING_16X16);
-        private int System_Font3 = CreateFontToHandle("MS UI Gothic", 80, 5, DX_FONTTYPE_ANTIALIASING_16X16);
+        private int System_Font3 = CreateFontToHandle("MS UI Gothic", 65, 5, DX_FONTTYPE_ANTIALIASING_16X16);
         private int System_Font4 = CreateFontToHandle("MS UI Gothic", 400, 5, DX_FONTTYPE_ANTIALIASING_16X16);
         private int System_Font5 = CreateFontToHandle("MS UI Gothic", 70, 5, DX_FONTTYPE_ANTIALIASING_16X16);
         private int System_Font6 = CreateFontToHandle("MS UI Gothic", 160, 2, DX_FONTTYPE_ANTIALIASING_16X16);
