@@ -1,0 +1,168 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|solutionrelative:mainscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|c:\\users\\0ren5\\source\\repos\\asahi-rcj\\rcj-soccer-scoreing-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|c:\\users\\0ren5\\source\\repos\\asahi-rcj\\rcj-soccer-scoreing-system\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|solutionrelative:config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\resourceloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJ_Soccer_Scoring_System.csproj|solutionrelative:resourceloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJJ_Soccer_Scoring_System.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DC563914-1F25-4D57-B7CD-3B1794CA8C12}|RCJJ_Soccer_Scoring_System.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\amaoto\\configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|solutionrelative:amaoto\\configmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\amaoto\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|solutionrelative:amaoto\\input.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\amaoto\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|solutionrelative:amaoto\\mouse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\amaoto\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{595495D3-6046-45F5-B486-B1161605FE6E}|Amaoto\\Amaoto.csproj|solutionrelative:amaoto\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Config.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Config.cs",
+              "RelativeDocumentMoniker": "Config.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Config.cs",
+              "RelativeToolTip": "Config.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T14:55:21.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAxwCcAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainScreen.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\MainScreen.cs",
+              "RelativeDocumentMoniker": "MainScreen.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\MainScreen.cs",
+              "RelativeToolTip": "MainScreen.cs",
+              "ViewState": "AQIAAKYBAAAAAAAAAAAcwHkCAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Input.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\Input.cs",
+              "RelativeDocumentMoniker": "Amaoto\\Input.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\Input.cs",
+              "RelativeToolTip": "Amaoto\\Input.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Mouse.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\Mouse.cs",
+              "RelativeDocumentMoniker": "Amaoto\\Mouse.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\Mouse.cs",
+              "RelativeToolTip": "Amaoto\\Mouse.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAjwGYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Texture.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\Texture.cs",
+              "RelativeDocumentMoniker": "Amaoto\\Texture.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\Texture.cs",
+              "RelativeToolTip": "Amaoto\\Texture.cs",
+              "ViewState": "AQIAAKsAAAAAAAAAAAAAAL8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:51:56.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResourceLoader.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\ResourceLoader.cs",
+              "RelativeDocumentMoniker": "ResourceLoader.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\ResourceLoader.cs",
+              "RelativeToolTip": "ResourceLoader.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConfigManager.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\ConfigManager.cs",
+              "RelativeDocumentMoniker": "Amaoto\\ConfigManager.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Amaoto\\ConfigManager.cs",
+              "RelativeToolTip": "Amaoto\\ConfigManager.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAIAywCkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\0ren5\\source\\repos\\asahi-rcj\\RCJ-Soccer-Scoreing-System\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACMAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-06-06T10:47:11.462Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

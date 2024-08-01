@@ -26,6 +26,7 @@ namespace RCJ_Soccer_Scoring_System
                 SetUseASyncChangeWindowModeFunction(TRUE, null, null);
                 SetChangeScreenModeGraphicsSystemResetFlag(FALSE);
             }
+            SetMaskReverseEffectFlag(TRUE);
             SetAlwaysRunFlag(TRUE);
             SetWaitVSyncFlag(FALSE);
             SetOutApplicationLogValidFlag(FALSE);
@@ -50,11 +51,10 @@ namespace RCJ_Soccer_Scoring_System
 
             ms.Enable();
 
+            MaskScreenHandle = MakeScreen(1920, 1080, TRUE);
             CreateMaskScreen();
             SetMaskScreenGraph(MaskScreenHandle);
                 
-            MaskScreenHandle = MakeScreen(1920, 1080, TRUE);
-
             SetDrawScreen(DX_SCREEN_BACK);
 
             while (ProcessMessage() == 0)

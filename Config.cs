@@ -17,6 +17,11 @@ namespace RCJJ_Soccer_Scoring_System
             public int GameTime = 5 * 60;
 
             /// <summary>
+            /// ハーフタイム。
+            /// </summary>
+            public int HalfTime = 2 * 60;
+
+            /// <summary>
             /// 指定したロボットのアウトオブバンズ時間を指定するかどうか。
             /// </summary>
             public bool Original_OutTime = true;
